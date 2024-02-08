@@ -40,7 +40,7 @@ const Home = () => {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 bg-gradient">
+    <main className="flex min-h-screen flex-col items-center p-24">
       {/* Display "Projects" heading at the top center */}
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-2xl lg:flex">
         <p className="left-0 top-0 flex w-full justify-center border-b border-gray-300 backdrop-blur-2xl dark:border-neutral-800 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:p-4" style={{ background: 'rgba(224, 129, 246, 0.45)' }}>
@@ -76,9 +76,9 @@ const Home = () => {
             <CustomVideo
               videos={[selectedProject.video]}  // Change from src to videos
               alt={selectedProject.name}
-              width={1000}  // Adjust the width as needed
-              height={750}  // Adjust the height as needed
-              onClick={() => console.log('Video clicked')}
+              width={"1000"}  // Adjust the width as needed
+              height={"750"}  // Adjust the height as needed
+              // onClick={() => console.log('Video clicked')}
             />
           </div>
         </div>
