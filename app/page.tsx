@@ -1,169 +1,66 @@
-// import Image from "next/image";
+'use client';
 
-// export default function Home() {
-//   return (
-//     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-//       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-//         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-//           Get started by editing&nbsp;
-//           <code className="font-mono font-bold">app/page.tsx</code>
-//         </p>
-//         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-//           <a
-//             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-//             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             By{" "}
-//             <Image
-//               src="/vercel.svg"
-//               alt="Vercel Logo"
-//               className="dark:invert"
-//               width={100}
-//               height={24}
-//               priority
-//             />
-//           </a>
-//         </div>
-//       </div>
-
-//       <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-//         <Image
-//           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-//           src="/next.svg"
-//           alt="Next.js Logo"
-//           width={180}
-//           height={37}
-//           priority
-//         />
-//       </div>
-
-//       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-//         <a
-//           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2 className={`mb-3 text-2xl font-semibold`}>
-//             Docs{" "}
-//             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-//               -&gt;
-//             </span>
-//           </h2>
-//           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-//             Find in-depth information about Next.js features and API.
-//           </p>
-//         </a>
-
-//         <a
-//           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2 className={`mb-3 text-2xl font-semibold`}>
-//             Learn{" "}
-//             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-//               -&gt;
-//             </span>
-//           </h2>
-//           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-//             Learn about Next.js in an interactive course with&nbsp;quizzes!
-//           </p>
-//         </a>
-
-//         <a
-//           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2 className={`mb-3 text-2xl font-semibold`}>
-//             Templates{" "}
-//             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-//               -&gt;
-//             </span>
-//           </h2>
-//           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-//             Explore starter templates for Next.js.
-//           </p>
-//         </a>
-
-//         <a
-//           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2 className={`mb-3 text-2xl font-semibold`}>
-//             Deploy{" "}
-//             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-//               -&gt;
-//             </span>
-//           </h2>
-//           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-//             Instantly deploy your Next.js site to a shareable URL with Vercel.
-//           </p>
-//         </a>
-//       </div>
-//     </main>
-//   );
-// }
-
-'use client'
-
-import Image from 'next/image';
-import React, { useState } from 'react';
+import CustomVideo from "./components/CustomVideo";
+import React, { useState } from "react";
+import { useMediaQuery } from 'react-responsive';
 
 interface ProjectData {
   name: string;
   description: string;
-  image: string;
+  video: string;
 }
 
 const projects: ProjectData[] = [
-  { name: '2J', description: 'Description 1', image: '/2j.png' },
-  { name: 'Know Yourself Better', description: 'Description 1', image: '/2j.png' },
+  {
+    name: "2JS",
+    description:
+      "2JS is a Basic Portfolio Website with an artistic touch featuring 3D models. The website is designed to showcase the skills and projects of the developer in a visually appealing manner. The use of 3D models adds a unique and immersive element, creating an interactive experience for visitors.",
+    video: "/SJ.mp4",
+  },
+
+  {
+    name: "Know Yourself Better",
+    description:
+      "Know Yourself Better is a self-discovery platform with a clear vision to help individuals find the inner spark that acts as a flame within themselves. This internal flame, once ignited, serves as a source of motivation and inspiration. The platform is dedicated to guiding users on a journey of self-exploration, offering insights and tools to uncover their strengths and potential. It addresses life problems from various perspectives, including physical, mental, vital, and spiritual aspects, providing a holistic approach to personal development.",
+    video: "/KYB.mp4", 
+  },
+
+  {
+    name: "AuroPay",
+    description:
+      "AuroPay is a secure and user-friendly payment service app that offers a multi-platform experience, integrating seamlessly with popular payment gateways. It introduces the innovative AuroPay Balance feature, allowing users to load funds easily and simplifying transactions. With a commitment to security, transparency, and decentralization, AuroPay ensures robust encryption for secure transactions. The platform includes a Scanning option for hassle-free navigation and supports real-time transaction tracking. AuroPay's dedicated customer support system promptly addresses user queries, issues, and disputes, while also adhering to government compliance requirements.",
+    video: "/AuroPay.mp4",
+  },
 ];
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
   const handleProjectClick = (project: ProjectData) => {
     setSelectedProject(project);
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+    <main className="flex min-h-screen flex-col items-center p-24">
+      {/* Display "Projects" heading at the top center */}
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-2xl lg:flex">
+        <p className="left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Projects
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          {selectedProject && (
-            <div className="flex items-center">
-              <Image
-                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-                src={selectedProject.image}
-                alt={selectedProject.name}
-                width={180}
-                height={37}
-                priority
-              />
-              <p className="ml-4">{selectedProject.description}</p>
-            </div>
-          )}
-        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <br/>
+      {/* Display list of projects below the heading */}
+      <div className="mb-8 text-center lg:max-w-5xl lg:w-full mx-auto lg:grid lg:grid-cols-4 lg:text-center justify-center" >
         {projects.map((project, index) => (
-          <div key={index} className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+          <div
+            key={index}
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 flex justify-center"
+          >
             <a
               href={`#${project.name}`}
-              className="mb-3 text-2xl font-semibold"
+              className="mb-3 text-xl font-mono"
               onClick={() => handleProjectClick(project)}
             >
               {project.name}
@@ -171,10 +68,26 @@ const Home = () => {
           </div>
         ))}
       </div>
+
+      {/* Display selectedProject video and description below the list of projects */}
+      {selectedProject && (
+        <div className="mb-8 text-center justify-center">
+          <div className="p-8 text-black">
+            <p>{selectedProject.description}</p>
+          </div>
+          <div className="p-8">
+            <CustomVideo
+              videos={[selectedProject.video]}  // Change from src to videos
+              alt={selectedProject.name}
+              width={400}  // Adjust the width as needed
+              height={750}  // Adjust the height as needed
+              onClick={() => console.log('Video clicked')}
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 };
 
 export default Home;
-
-

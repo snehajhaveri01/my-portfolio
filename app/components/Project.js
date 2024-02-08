@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState } from 'react';
-import CustomImage from './Image';
+import Customvideo from './Slideshow';
 
-const Project = ({ image, description }) => {
+const Project = ({ video, description }) => {
   const [maximized, setMaximized] = useState(false);
 
   const toggleMaximize = () => {
@@ -12,9 +12,9 @@ const Project = ({ image, description }) => {
 
   return (
     <div className={`project ${maximized ? 'maximized' : ''}`}>
-      <CustomImage
-        src={image}
-        alt="Project Photo"
+      <Customvideo
+        src={video}
+        alt="Project Video"
         onClick={toggleMaximize}
       />
       <p>{description}</p>
