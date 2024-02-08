@@ -2,7 +2,6 @@
 
 import CustomVideo from "./components/CustomVideo";
 import React, { useState } from "react";
-import { useMediaQuery } from 'react-responsive';
 
 interface ProjectData {
   name: string;
@@ -14,7 +13,7 @@ const projects: ProjectData[] = [
   {
     name: "2JS",
     description:
-      "2JS is a Basic Portfolio Website with an artistic touch featuring 3D models. The website is designed to showcase the skills and projects of the developer in a visually appealing manner. The use of 3D models adds a unique and immersive element, creating an interactive experience for visitors.",
+      "The description captures the essence of '2JS' a portfolio website designed with an artistic flair, featuring 3D models. The website's primary purpose is to showcase the developer's skills and projects in a visually appealing manner. The inclusion of 3D models adds a unique and immersive element, creating an interactive experience for visitors. The emphasis on a visually appealing design and interactive features aims to engage users while effectively presenting the developer's work.",
     video: "/SJ.mp4",
   },
 
@@ -35,28 +34,26 @@ const projects: ProjectData[] = [
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
   const handleProjectClick = (project: ProjectData) => {
     setSelectedProject(project);
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
+    <main className="flex min-h-screen flex-col items-center p-24 bg-gradient">
       {/* Display "Projects" heading at the top center */}
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-2xl lg:flex">
-        <p className="left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+        <p className="left-0 top-0 flex w-full justify-center border-b border-gray-300 backdrop-blur-2xl dark:border-neutral-800 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:p-4" style={{ background: 'rgba(224, 129, 246, 0.45)' }}>
           Projects
         </p>
       </div>
-
       <br/>
       {/* Display list of projects below the heading */}
       <div className="mb-8 text-center lg:max-w-5xl lg:w-full mx-auto lg:grid lg:grid-cols-4 lg:text-center justify-center" >
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 flex justify-center"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-purple-100 flex justify-center"
           >
             <a
               href={`#${project.name}`}
@@ -79,7 +76,7 @@ const Home = () => {
             <CustomVideo
               videos={[selectedProject.video]}  // Change from src to videos
               alt={selectedProject.name}
-              width={400}  // Adjust the width as needed
+              width={1000}  // Adjust the width as needed
               height={750}  // Adjust the height as needed
               onClick={() => console.log('Video clicked')}
             />

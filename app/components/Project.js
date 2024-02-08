@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import Customvideo from './Slideshow';
+import CustomVideo from "./components/CustomVideo";
 
 const Project = ({ video, description }) => {
   const [maximized, setMaximized] = useState(false);
@@ -12,7 +12,7 @@ const Project = ({ video, description }) => {
 
   return (
     <div className={`project ${maximized ? 'maximized' : ''}`}>
-      <Customvideo
+      <CustomVideo
         src={video}
         alt="Project Video"
         onClick={toggleMaximize}

@@ -1,7 +1,7 @@
 
-# Project Carousel
+# Project Showcase
 
-A Next.js and Tailwind CSS project for displaying projects with descriptions in a carousel.
+A Next.js and Tailwind CSS project for displaying projects with descriptions.
 
 ## Table of Contents
 
@@ -17,11 +17,11 @@ A Next.js and Tailwind CSS project for displaying projects with descriptions in 
 
 ## Project Overview
 
-"Project Carousel" is a web application built with Next.js and Tailwind CSS. It provides a simple and interactive way to showcase different projects using a carousel layout. Each project slide includes project details and a description, creating an engaging experience for users.
+"Project Showcase" is a web application built with Next.js and Tailwind CSS. It provides a simple and interactive way to showcase different projects. Each project includes project details and a description, creating an engaging experience for users.
 
 ## Features
 
-- Carousel layout for displaying projects.
+- Video layout for displaying projects.
 - Project details and descriptions for each slide.
 
 ## Getting Started
@@ -38,13 +38,13 @@ Before you begin, make sure you have the following tools installed:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/project-carousel.git
+    git clone https://github.com/your-username/my-portfolio.git
     ```
 
 2. Navigate to the project folder:
 
     ```bash
-    cd project-carousel
+    cd my-portfolio
     ```
 
 3. Install dependencies:
