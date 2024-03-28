@@ -5,9 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Projects",
- 
-  description: "Created by sj",
+  title: "sj - software developer",
+  description: "Developed by sj",
 };
 
 export default function RootLayout({
