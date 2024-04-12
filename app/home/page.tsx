@@ -3,13 +3,18 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.pinimg.com/564x/9d/51/76/9d517609989d9ca3f81c66ad8bc602ff.jpg)'}}>
-    <div className="hero-overlay bg-opacity-60"></div>
-    <div className="hero-content text-center text-neutral-content">
-      <div className="max-w-md">
-        <h1 className="mb-5 text-5xl font-bold">COMING SOON</h1>
-        <p className="mb-5">Sneha Jhaveri</p>
-        {/* <button className="btn btn-primary">Get Started</button> */}
+    <div className="hero min-h-screen">
+    <div className="hero-content flex-col lg:flex-row-reverse">
+      <Image src="/assets/images/books.png"
+       className="" 
+       alt="Hero"
+       width={1000}
+       height={1000} />
+      <div>
+        <h1 className="text-5xl font-bold"> Hey, Myself Sneha Jhaveri</h1>
+        <p className="py-6">a software developer specializing in web and app development. I'm passionate about efficient coding and embody a unique blend of expertise and curiosity.</p>
+        <p>Beyond tech, I am a Cofficionado, avid reader, fitness enthusiast, and dedicated journaler, embracing holistic growth.</p>
+        <button className="btn btn-primary">Get Started</button>
       </div>
     </div>
   </div>
